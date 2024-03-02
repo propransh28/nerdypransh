@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerdy Pransh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('12.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px; /* Increased padding */
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .book-list {
+            margin-top: 20px;
+            font-size: 22px; /* Decreased font size */
+            line-height: 1.5; /* Maintained line height */
+            
+        }
+
+        .book-item {
+            margin-bottom: 10px; /* Adjusted margin between items */
+        }
+
+        .book-name {
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        .chapter-dropdown {
+            display: none; /* Hide dropdown initially */
+            margin-top: 10px;
+        }
+
+        .chapter-dropdown-item {
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        .book-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px; /* Decreased button font size */
+        }
+
+        .book-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nerdy Pransh</h1>
+</header>
+
+<div class="container">
+    <div class="book-list">
+        <div class="book-item">
+            <span class="book-name" onclick="toggleDropdown('dropdown1')">Concise Maths</span>
+            <div class="chapter-dropdown" id="dropdown1">
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-01-Value-Added-Tax.pdf')">Chapter 1: Value Added Tax</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-02-Banking.pdf')">Chapter 2: Banking</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-03-Shares-and-Dividend.pdf')">Chapter 3: Shares And Dividends</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-04-Linear-Inequations.pdf')">Chapter 4: Linear Equations In One variable</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-05-Quadratic-Equations.pdf')">Chapter 5: Quadratic Equations</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-06-Solving-Simple-Problems-Based-On-Quadratic-Equations.pdf')">Chapter 6: Problems Based on Quadratic Equations</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-07-Ratio-and-Proportion-Including-Properties-and-Uses.pdf')">Chapter 7: Ration And Proportion</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-08-Remainder-and-Factor-Theorems.pdf')">Chapter 8: Reminder And Factor Theorems</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-09-Matrices.pdf')">Chapter 9: Matrices</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-10-Arithmetic-Progression.pdf')">Chapter 10: Arithmetic Progression</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-11-Geometric-Progression.pdf')">Chapter 11: Geometric Progression</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-12-Reflection.pdf')">Chapter 12: Reflection</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-13-Section-and-Mid-Point-Formula.pdf')">Chapter 13: Section And Mid-Formula</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-14-Equation-of-a-Line.pdf')">Chapter 14: Equation in a Line</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-15-Similarity.pdf')">Chapter 15: Similarity</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-16-Loci.pdf')">Chapter 16: Loci</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-17-Circles.pdf')">Chapter 17: Circles</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-18-Tangents-and-Intersecting-Chords.pdf')">Chapter 18: Tangents And Intersecting Chords</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-19-Constructions-Circles.pdf')">Chapter 19: Construction(Cirlces)</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-20-Cylinder,-Cone-and-Sphere.pdf')">Chapter 20: Cylinder,Cone And Sphere (Surface Area And Volume)</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-21-Trigonometrical-Identities.pdf')">Chapter 21: Trignometrical Identities</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-22-Heights-and-Distances.pdf')">Chapter 22: Heights And Distances</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-23-Graphical-Representation.pdf')">Chapter 23: Graphical Representation</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Chapter-25-Probability.pdf')">Chapter 24: Probability</div>
+            </div>
+            <a href="https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Bansal-Maths-Selina-RK-Bansal-Contents.pdf" class="book-link">Download Full Book</a>
+        </div>
+        <div class="book-item">
+            <span class="book-name" onclick="toggleDropdown('dropdown2')">Concise Physics</span>
+            <div class="chapter-dropdown" id="dropdown2">
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap1phy.pdf')">Chapter 1: Force</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap2phy.pdf')">Chapter 2: Work, Energy And Power</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap3phy.pdf')">Chapter 3: Machines</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap4phy.pdf')">Chapter 4: Refraction Of Light At Plane Surfaces</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap5phy.pdf')">Chapter 5: Refraction Through A Lens</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap6phy.pdf')">Chapter 6: Spectrum</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap7phy.pdf')">Chapter 7: Sound</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap8phy.pdf')">Chapter 8: Current And Electricity</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap9phy.pdf')">Chapter 9: HouseHold Circuits</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap10phy.pdf')">Chapter 10: ElectroMagnetism</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap11phy.pdf')">Chapter 11: Calorimetry</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap12phy.pdf')">Chapter 12: Radioactivity</div>                <!-- Add more chapters as needed -->
+            </div>
+            <a href="phy.pdf" class="book-link">Download Full Book</a>
+        </div>
+        <div class="book-item">
+            <span class="book-name" onclick="toggleDropdown('dropdown3')">Concise Chemistry</span>
+            <div class="chapter-dropdown" id="dropdown3">
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap1chem.pdf')">Chapter 1: Periodic Table</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap2chem.pdf')">Chapter 2: Chemical Bonding</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Chemistry-Chapter-03-Acids-Bases-and-Salts.pdf')">Chapter 3: Acids Bases And Salts</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('https://cbsencert.online/wp-content/uploads/icsebooks/ICSE-Class-10-Chemistry-Chapter-04-Analytical-Chemistry.pdf')">Chapter 4: Analytical Chemistry</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap5chem.pdf')">Chapter 5: Mole Concept And Stoichimetry</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap6chem.pdf')">Chapter 6: Electrolysis</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap7chem.pdf')">Chapter 7: Metallurgy</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap8chem.pdf')">Chapter 8: Study Of Compunds Hydrogen Chloride</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap9chem.pdf')">Chapter 9: Study Of Compounds Ammonia</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap10chem.pdf')">Chapter 10: Study Of Compunds Nitric Acid</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap11chem.pdf')">Chapter 11: Sulphuric Acid</div>
+                <div class="chapter-dropdown-item" onclick="downloadChapter('chap12chem.pdf')">Chapter 12: Organic Chemistry</div>                <!-- Add more chapters as needed -->
+            </div>
+            <a href="chem.pdf" class="book-link">Download Full Book</a>
+        </div>
+        <!-- Add more book items as needed -->
+    </div>
+</div>
+
+<script>
+    function toggleDropdown(id) {
+        var dropdown = document.getElementById(id);
+        if (dropdown.style.display === "block") {
+            dropdown.style.display = "none";
+        } else {
+            dropdown.style.display = "block";
+        }
+    }
+
+    function downloadChapter(link) {
+        // Redirect to
+        window.location.href = link;
+    }
+    var images = ['1.jpg', '200.gif', '2.jpg' , '4.gif' , '5.gif' , '6.gif']; // Add your image filenames here
+    var currentImageIndex = 0;
+    var body = document.querySelector('body');
+
+    function changeBackgroundImage() {
+        body.style.backgroundImage = 'url("' + images[currentImageIndex] + '")';
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+    }
+
+    // Change background image every 5 seconds (5000 milliseconds)
+    setInterval(changeBackgroundImage, 5000);
+</script>
+
+</body>
+</html>
+
